@@ -141,8 +141,8 @@ h2.location {
   font-size: 16px;
   font-family: Roboto, sans-serif;
   color: #333;
-  margin-top: 0;
-  padding-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 /* Flexbox */
@@ -166,6 +166,7 @@ h2.location {
   height: auto;
   align-items: center;
   margin: auto;
+  padding-bottom: 10px;
 }
 
 /* Dropdown Button */
