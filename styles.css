@@ -221,7 +221,7 @@ h2.location {
 /* RESPONSIVE CSS */
 /* Monitor */
 @media only screen and (min-width: 999px) {
-  .sections {
+  section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -269,7 +269,7 @@ h2.location {
     justify-content: center;
   }
 
-  .sections {
+  section {
       flex-direction: row;
       /* flex */
   }
@@ -319,7 +319,7 @@ h2.location {
     text-align: center;
   }
 
-  .sections {
+  section {
       flex-basis: auto;
       flex-direction: column;
   }
