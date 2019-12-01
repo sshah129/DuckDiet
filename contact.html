@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <title>DuckDiet | Contact</title> 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contactstyles.css">
   </head>
 
   <body>
@@ -54,6 +55,38 @@
                 <td class="contactemail"><a href="mailto:sshah129@stevens.edu">sshah129@stevens.edu</a></td>
               </tr>
             </table>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content-container">
+          <div class="content-body">
+            <h1 class="sectionheader">Contact Form</h1>
+            <p class="contact">Not satisfied with your experience? Want to send us some memes? Fill out the form below and let us know how you feel!</p> <br>
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="First Name">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+              <label for="email">E-mail</label>
+              <input type="text" id="lname" name="lastname" placeholder="Email">
+          
+              <label for="occupation">Occupation</label>
+              <select id="occupation" name="occupation">
+                  <option value="student-on-campus">Student (On-Campus)</option>
+                  <option value="student-commuter">Student (Commuter)</option>
+                  <option value="administrator">Administrator</option>
+                  <option value="professor">Professor</option>
+                  <option value="faculty">Faculty</option>
+                </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Enter your message here!" style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
           </div>
         </div>
       </div>
