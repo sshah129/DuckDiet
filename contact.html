@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <title>DuckDiet | Contact</title> 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contactstyles.css">
   </head>
 
   <body>
@@ -57,6 +58,41 @@
           </div>
         </div>
       </div>
+      <div class="content">
+        <div class="content-container">
+          <div class="content-body">
+            <h1 class="sectionheader">Feedback</h1>
+            <p class="contact">Not satisfied with your experience? Fill out the form below and let us know how you feel!</p>
+            <!--  action="/action_page.php" -->
+            <form name="contactForm" method="post" action="process.php" onsubmit="return validateFirst(), validateLast(), validateEmail(), validateOccupation()">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="firstname" placeholder="First Name">
+          
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+              <label for="email">E-mail *</label>
+              <input type="text" id="lname" name="email" placeholder="Email">
+          
+              <label for="occupation">Occupation *</label>
+              <select id="occupation" name="occupation">
+                  <option value="default">Select Your Occupation</option>
+                  <option value="student-on-campus">Student (On-Campus)</option>
+                  <option value="student-commuter">Student (Commuter)</option>
+                  <option value="administrator">Administrator</option>
+                  <option value="professor">Professor</option>
+                  <option value="faculty">Faculty</option>
+                </select>
+          
+              <label for="subject">Comments</label>
+              <textarea id="subject" name="subject" placeholder="Let us know how you feel!" id="floatright"></textarea>
+          
+              <input type="submit" value="Submit" onclick="submitConfirm()">
+            </form>
+            <aside>* Required Field</aside>
+          </div>
+        </div>
+      </div>
     </section>
     <footer>
       <p>Developed by Group 15 for CS-146 &copy; 2019</p>
@@ -64,6 +100,7 @@
 
     <img src="Corner.jpg" alt="corner" class = "image">
 
+    <script src="Scripts.js"></script>
   </body>
 
 </html>
