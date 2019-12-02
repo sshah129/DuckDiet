@@ -27,7 +27,7 @@ input[type=text], select, textarea {
   margin-bottom: 16px;
 }
 
-input[type=email], select, textarea {
+input[type=email] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -37,7 +37,16 @@ input[type=email], select, textarea {
   margin-bottom: 16px;
 }
 
-input[type=submit] {
+input[type=checkbox] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type=submit], input[type=reset] {
   background-color: #cc4444;
   color: white;
   padding: 12px 20px;
@@ -46,7 +55,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, input[type=reset]:hover {
   background-color: #c41919;
 }
 

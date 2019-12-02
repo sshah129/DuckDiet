@@ -5,6 +5,8 @@ function validateFirst() {
     if (x == "") {
       alert("Please fill in your First Name");
       return false;
+    } else {
+      return true;
     }
   };
 
@@ -20,7 +22,7 @@ function validateEmail() {
     var x = document.forms["contactForm"]["email"].value;
     var validemail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (validemail.test(x.toLowerCase())) {
-        pass
+        return true;
     } else {
         alert("Please enter a valid Email");
         return false;
@@ -32,8 +34,19 @@ function validateOccupation() {
     if (x == "default") {
       alert("Please select your Occupation");
       return false;
+    } else {
+      return true;
     }
   };
+
+function validateForm() {
+    var x = document.getElementById("accept").checked;
+    if (x == false) {
+      alert("You must accept before submitting the form");
+      return false;
+    } else {
+      return true;
+    }
 
 /** 
 function submitConfirm() {
@@ -42,3 +55,8 @@ function submitConfirm() {
     }
   };
 */
+
+function submitForm() {
+  var contactForm = document.getElementById("contactForm");
+  contactForm.submit();
+}
