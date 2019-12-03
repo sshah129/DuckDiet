@@ -1,9 +1,44 @@
 // CONTACT FORM VALIDATION
+function alertFirst() {
+  var x = document.forms["contactForm"]["firstname"].value;
+  if (x == "") {
+    alert("Please fill in your First Name");
+  }
+};
+
+function alertLast() {
+  var x = document.forms["contactForm"]["lastname"].value;
+  if (x == "") {
+    alert("Please fill in your Last Name");
+  }
+};
+
+function alertEmail() {
+  var x = document.forms["contactForm"]["email"].value;
+  var validemail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (!(validemail.test(x.toLowerCase()))) {
+    alert("Please enter a valid Email");
+  }
+};
+
+function alertOccupation() {
+  var x = document.forms["contactForm"]["occupation"].value;
+  if (x == "default") {
+    alert("Please select your Occupation");
+  }
+};
+
+function alertContact() {
+  alertFirst();
+  alertLast();
+  alertEmail();
+  alertOccupation();
+};
+
 
 function validateFirst() {
     var x = document.forms["contactForm"]["firstname"].value;
     if (x == "") {
-      alert("Please fill in your First Name");
       return false;
     } else {
       return true;
@@ -13,26 +48,25 @@ function validateFirst() {
 function validateLast() {
     var x = document.forms["contactForm"]["lastname"].value;
     if (x == "") {
-      alert("Please fill in your Last Name");
       return false;
+    } else {
+      return true;
     }
   };
 
 function validateEmail() {
     var x = document.forms["contactForm"]["email"].value;
     var validemail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (validemail.test(x.toLowerCase())) {
-        return true;
+    if (!(validemail.test(x.toLowerCase()))) {
+      return validemail.test(x.toLowerCase())
     } else {
-        alert("Please enter a valid Email");
-        return false;
+      return true;
     }
   };
 
 function validateOccupation() {
     var x = document.forms["contactForm"]["occupation"].value;
     if (x == "default") {
-      alert("Please select your Occupation");
       return false;
     } else {
       return true;
@@ -40,23 +74,20 @@ function validateOccupation() {
   };
 
 function validateForm() {
-    var x = document.getElementById("accept").checked;
-    if (x == false) {
-      alert("You must accept before submitting the form");
-      return false;
-    } else {
-      return true;
-    }
-
-/** 
-function submitConfirm() {
     if (validateFirst() && validateLast() && validateEmail() && validateOccupation()) {
-    return alert("Your response has been submitted!");
+      alert("Your response has been submitted!");
+      document.getElementById("contactForm").reset();
+      return true;
+    } else {
+      return false;
     }
-  };
-*/
+}
 
 function submitForm() {
-  var contactForm = document.getElementById("contactForm");
-  contactForm.submit();
+  alertContact();
+  if (validateForm()) {
+    return true;
+  } else {
+    return false;
+  }
 }

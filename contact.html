@@ -63,8 +63,8 @@
           <div class="content-body">
             <h1 class="sectionheader">Feedback</h1>
             <p class="contact">Not satisfied with your experience? Fill out the form below and let us know how you feel!</p>
-            <!--  action="/action_page.php" -->
-            <form name="contactForm" method="post" action="process.php" onsubmit="return validateFirst(), validateLast(), validateEmail(), validateOccupation(), validateForm()">
+            <!--  action="/action_page.php"  or  method="post" action="process.php"-->
+            <form name="contactForm" method="post" onsubmit="return submitForm();">
               <label for="fname">First Name *</label>
               <input type="text" id="fname" name="firstname" placeholder="First Name">
           
@@ -76,13 +76,13 @@
           
               <label for="occupation">Occupation *</label>
               <select id="occupation" name="occupation">
-                  <option value="default">Select Your Occupation</option>
-                  <option value="student-on-campus">Student (On-Campus)</option>
-                  <option value="student-commuter">Student (Commuter)</option>
-                  <option value="administrator">Administrator</option>
-                  <option value="professor">Professor</option>
-                  <option value="faculty">Faculty</option>
-                </select>
+                <option value="default">Select Your Occupation</option>
+                <option value="student-on-campus">Student (On-Campus)</option>
+                <option value="student-commuter">Student (Commuter)</option>
+                <option value="administrator">Administrator</option>
+                <option value="professor">Professor</option>
+                <option value="faculty">Faculty</option>
+              </select>
           
               <label for="subject">Comments</label>
               <textarea id="subject" name="subject" placeholder="Let us know how you feel!" id="floatright"></textarea>
@@ -90,7 +90,7 @@
               <label for="agree">I agree to give Group 15 an A *</label>
               <input type="checkbox" name="accept" id="accept" required oninvalid="this.setCustomValidity('You must accept the terms before submitting!');" oninput="this.setCustomValidity('');">
               <br>
-              <input type="submit" value="Submit" onclick="submitForm()">
+              <input type="submit" value="Submit">
               <input type="reset"  />
             </form>
             <aside>* Required Field</aside>
