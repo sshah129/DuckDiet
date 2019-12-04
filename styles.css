@@ -9,6 +9,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.center {
+  text-align: center;
+  left: 50%;
+  right: 50%;
+}
+
 .title a{
   color: white;
   text-decoration: none;
@@ -47,6 +53,19 @@ body {
 p {
   font-family: 'Raleway', sans-serif;
   color: #333;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#reset {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  font-size: 14px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -109,8 +128,9 @@ footer p {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  height: 15%;
+  height: 20%;
   z-index: 100;
+  opacity: 75%;
 }
 
 .photo {
@@ -127,7 +147,7 @@ footer p {
 }
 
 table.contact {
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
   font-family: 'Raleway',sans-serif;
 }
@@ -165,6 +185,10 @@ h2.location {
   margin-bottom: 8px;
 }
 
+fieldset {
+  border: none;
+}
+
 /* Flexbox */
 .content {
   display: flex;
@@ -180,6 +204,20 @@ h2.location {
   background-color: white;
   display: flex;
   box-shadow: 5px 5px 10px #777;
+}
+
+#list-container {
+  width: auto;
+  flex-direction: row;
+  position: static;
+  margin: auto;
+}
+
+#menu-container {
+  width: auto;
+  flex-direction: row;
+  position: static;
+  margin: 20px auto 0 auto;
 }
 
 .content-body {
@@ -317,7 +355,7 @@ h2.location {
     height: 75px;
     width: 75px;
   }
-  
+
   .image {
     height: 8%;
   }
