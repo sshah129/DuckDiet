@@ -456,7 +456,7 @@ fieldset {
   }
 
   #list-container {
-    width: auto;
+    width: 100%;
     flex-direction: row;
     position: static;
     margin: auto;
