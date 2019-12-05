@@ -24,7 +24,8 @@
       <hr>
     </nav>
     <section>
-      <div class="content" id="menu-content">
+      <div id="menus-div">
+      <div class="content" id="list-content">
         <div class="content-container" id="list-container">
           <div class="content-body">
             <h2 class="sectionheader" id = "dropdown_menu">Menu Selection</h2>
@@ -229,81 +230,98 @@
           </div>
         </div>
       </div>
-      <div class="content">
+      <div class="content" id="menu-content">
         <div class="content-container" id="menu-container">
-          <div class="content-body">
-            <h2 class="sectionheader">Add Items</h2>
+          <div class="content-body" id="menu-body">
+            <h2 class="sectionheader" id="add-item-header">Add Items</h2>
             <br>
               <form id = "postForm" class="center">
-                <input
-                  type="text"
-                  name="meal"
-                  id="foodItemInput"
-                  placeholder="Please input meal."
-                />
-                <select id = "formDates" class="center">
-                  <option value='day1'>November 1</option>
-                  <option value='day2'>November 2</option>
-                  <option value='day3'>November 3</option>
-                  <option value='day4'>November 4</option>
-                  <option value='day5'>November 5</option>
-                  <option value='day6'>November 6</option>
-                  <option value='day7'>November 7</option>
-                  <option value='day8'>November 8</option>
-                  <option value='day9'>November 9</option>
-                  <option value='day10'>November 10</option>
-                  <option value='day11'>November 11</option>
-                  <option value='day12'>November 12</option>
-                  <option value='day13'>November 13</option>
-                  <option value='day14'>November 14</option>
-                  <option value='day15'>November 15</option>
-                  <option value='day16'>November 16</option>
-                  <option value='day17'>November 17</option>
-                  <option value='day18'>November 18</option>
-                  <option value='day19'>November 19</option>
-                  <option value='day20'>November 20</option>
-                  <option value='day21'>November 21</option>
-                  <option value='day22'>November 22</option>
-                  <option value='day23'>November 23</option>
-                  <option value='day24'>November 24</option>
-                  <option value='day25'>November 25</option>
-                  <option value='day26'>November 26</option>
-                  <option value='day27'>November 27</option>
-                  <option value='day28'>November 28</option>
-                  <option value='day29'>November 29</option>
-                  <option value='day30'>November 30</option>
-                </select>
-                <input
-                  type="text"
-                  name="meal"
-                  id="calorieInput"
-                  placeholder="Please input calories."
-                />
-                <button>Submit</button>
+                <div class="menu-form-div">
+                  <label>Meal</label><br>
+                  <input
+                    type="text"
+                    name="meal"
+                    id="foodItemInput"
+                    placeholder="Please input meal..."
+                  />
+                </div>
                 <br>
+                <div class="menu-form-div" id="date-div">
+                  <label>Date</label><br>
+                  <select id = "formDates" class="center">
+                    <option value='day1'>November 1</option>
+                    <option value='day2'>November 2</option>
+                    <option value='day3'>November 3</option>
+                    <option value='day4'>November 4</option>
+                    <option value='day5'>November 5</option>
+                    <option value='day6'>November 6</option>
+                    <option value='day7'>November 7</option>
+                    <option value='day8'>November 8</option>
+                    <option value='day9'>November 9</option>
+                    <option value='day10'>November 10</option>
+                    <option value='day11'>November 11</option>
+                    <option value='day12'>November 12</option>
+                    <option value='day13'>November 13</option>
+                    <option value='day14'>November 14</option>
+                    <option value='day15'>November 15</option>
+                    <option value='day16'>November 16</option>
+                    <option value='day17'>November 17</option>
+                    <option value='day18'>November 18</option>
+                    <option value='day19'>November 19</option>
+                    <option value='day20'>November 20</option>
+                    <option value='day21'>November 21</option>
+                    <option value='day22'>November 22</option>
+                    <option value='day23'>November 23</option>
+                    <option value='day24'>November 24</option>
+                    <option value='day25'>November 25</option>
+                    <option value='day26'>November 26</option>
+                    <option value='day27'>November 27</option>
+                    <option value='day28'>November 28</option>
+                    <option value='day29'>November 29</option>
+                    <option value='day30'>November 30</option>
+                  </select>
+                </div>
+                <br>
+                <div class="menu-form-div" id="calorie-div">
+                  <label>Calorie Value</label><br>
+                  <input
+                    type="number"
+                    name="meal"
+                    id="calorieInput"
+                    placeholder="Select calories..."
+                    step="10"
+                    min="0"
+                    max="9999"
+                  />
+                </div>
+                <div id="submit-div">
+                  <button id="submit-day">Submit</button>
+                </div>
               </form>
             <div>
+            <div id="line"></div>
             <div id="buttonDiv" class="center"><fieldset>
                 <label class="text">Enter a Calorie Goal: </label>
-                <input type="number" id="calNum" step="100">
+                <input type="number" placeholder="Select calories..." id="calNum" step="100" min="0" max="99999">
               <input type = 'submit' onClick = "checkCal()">
             </fieldset>
             </div>
             <div class="center" id="reset">
-              <button onClick = "resetCalGoal()">Reset Calorie Goal</button>
+              <button id="goal-reset" onClick = "resetCalGoal()">Reset Calorie Goal</button>
             </div>
             <p id = "calPar"></p>
           </div>
           </div>
         </div>
       </div>
+    </div>
     </section>
     <section>
       <div class="calendar">
         <div class="month">
             <ul>
-              <li class="prev">Oct</li>
-              <li class="next">Dec</li>
+              <li class="prev"></li>
+              <li class="next"></li>
               <li><h2>November 2019</h2></li>
             </ul>
         </div>
@@ -356,9 +374,9 @@
   <footer>
     <p>Developed by Group 15 for CS-146 &copy; 2019</p>
   </footer>
+  <img src="Corner.png" alt="corner" id="hwhelper" onclick="deleteHelper();">
 
-  <img src="Corner.jpg" alt="corner" class = "image">
-
+  <script src="Scripts.js"></script>
   <script src="menuScript.js"></script>
 
   </body>

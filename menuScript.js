@@ -49,7 +49,7 @@ function updateCal(inputCalorie){
   currentCalories = parseInt(currentCalories);
   dailyCaloriesInputed -= inputCalorie;
   currentCalories += parseInt(inputCalorie);
-  document.getElementById("calPar").innerHTML = "Your daily calories remaining: " + dailyCaloriesInputed + " calories." + "\n" 
+  document.getElementById("calPar").innerHTML = "Your daily calories remaining: " + dailyCaloriesInputed + " calories." + "<br><br>" 
                                                 + "Your current calorie count is " + parseInt(currentCalories) + " calories.";
   }
 }

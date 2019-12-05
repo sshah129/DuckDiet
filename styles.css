@@ -42,7 +42,7 @@ p.subtitle {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 28%;
   height: auto;
 }
 
@@ -124,13 +124,13 @@ footer p {
   color: white;
 }
 
-.image {
+#hwhelper {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  height: 20%;
+  height: 30%;
   z-index: 100;
-  opacity: 75%;
+  opacity: 100%;
 }
 
 .photo {
@@ -144,6 +144,7 @@ footer p {
   float: left;
   height: 250px;
   margin-right: 30px;
+
 }
 
 table.contact {
@@ -158,6 +159,11 @@ table.contact {
 
 .contactemail {
   text-align: right;
+}
+
+.contactemail a {
+  text-decoration: none;
+  color: #c41919;
 }
 
 .description {
@@ -195,6 +201,15 @@ fieldset {
   flex-grow: 1;
 }
 
+#menu-content {
+  width: auto;
+}
+
+#list-content {
+  width: auto;
+  float: left;
+}
+
 .content-container {
   align-items: center;
   margin: auto;
@@ -207,17 +222,32 @@ fieldset {
 }
 
 #list-container {
-  width: auto;
-  flex-direction: row;
-  position: static;
-  margin: auto;
+  width: 100%;
 }
 
 #menu-container {
-  width: auto;
-  flex-direction: row;
-  position: static;
-  margin: 20px auto 0 auto;
+  flex-grow: 1;
+}
+
+#menus-div {
+  display: flex;
+  flex-flow: row;
+}
+
+#menu-body {
+  position: relative;
+  top: 0px;
+  margin-top: 0px;
+}
+
+#add-item-header {
+  top: 0px;
+}
+
+#calPar {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .content-body {
@@ -241,6 +271,74 @@ fieldset {
 .menu-center {
   display: flex;
   justify-content: center;
+}
+
+/* Menu Styles */
+input[type=submit], input[type=reset], #submit-day, #goal-reset {
+  background-color: #cc4444;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=reset]:hover, #submit-day:hover, #goal-reset:hover {
+  background-color: #c41919;
+}
+
+input[type=text], input[type=number], select{
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+#calNum {
+  width: 25%;
+}
+
+#line{
+  width: auto;
+  height: 3px;
+  margin: 20px 0 10px 0;
+  background-color: #8b0000;
+}
+
+label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#postForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-form-div {
+  display: inline-block;
+  flex-grow: 1;
+  flex-basis: calc(100% / 3);
+}
+
+#submit-div {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+#submit-day {
+  margin: 0 30px 0 30px;
+  display: inline-block;
+  
+}
+
+fieldset {
+  margin-top: 10px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -289,6 +387,10 @@ fieldset {
     width: 100%;
     flex-basis: auto;
   }
+
+  #add-item-header {
+    margin-bottom: 20px;
+  }
 }
 
 /* Tablet */
@@ -302,7 +404,7 @@ fieldset {
     width: 75px;
   }
 
-  .image {
+  #hwhelper {
     height: 12%;
   }
 
@@ -315,11 +417,20 @@ fieldset {
   }
 
   .links {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .navbar ul {
     padding: 10px 0 10px 0;
+  }
+
+  #preview1 {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    left: 50%;
+    right: 50%;
   }
 
   header {
@@ -343,6 +454,32 @@ fieldset {
   footer p{
     font-size: 24px;
   }
+
+  #list-container {
+    width: auto;
+    flex-direction: row;
+    position: static;
+    margin: auto;
+  }
+  
+  #menu-container {
+    width: auto;
+    flex-direction: row;
+    position: static;
+    margin: 20px auto 0 auto;
+  }
+
+  #menus-div {
+    display: flex;
+    flex-flow: column;
+  }
+  
+  #menu-body {
+    position: relative;
+    top: 0px;
+    margin-top: 0px;
+  }
+    
 }
 
 /* Phone */
@@ -356,7 +493,7 @@ fieldset {
     width: 75px;
   }
 
-  .image {
+  #hwhelper {
     height: 8%;
   }
 
@@ -369,7 +506,7 @@ fieldset {
   }
 
   .links {
-    font-size: 34px;
+    font-size: 20px;
   }
 
   header {

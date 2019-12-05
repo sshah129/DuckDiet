@@ -64,7 +64,7 @@
             <h2 class="sectionheader">Feedback</h2>
             <p class="contact">Not satisfied with your experience? Fill out the form below and let us know how you feel!</p>
             <!--  action="/action_page.php"  or  method="post" action="process.php"-->
-            <form name="contactForm" method="post" onsubmit="return submitForm();">
+            <form name="contactForm" id="contactForm" method="post" onsubmit="return submitForm();">
               <label for="fname">First Name *</label>
               <input type="text" id="fname" name="firstname" placeholder="First Name">
           
@@ -103,8 +103,7 @@
     <footer>
       <p>Developed by Group 15 for CS-146 &copy; 2019</p>
     </footer>
-
-    <img src="Corner.jpg" alt="corner" class = "image">
+    <img src="Corner.png" alt="corner" id="hwhelper" onclick="deleteHelper();">
 
     <script src="Scripts.js"></script>
   </body>

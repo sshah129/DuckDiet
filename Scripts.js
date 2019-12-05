@@ -84,10 +84,18 @@ function validateForm() {
 }
 
 function submitForm() {
+  event.preventDefault();
   alertContact();
   if (validateForm()) {
     return true;
   } else {
     return false;
   }
+}
+
+// HW Helper
+var helper = document.getElementById("hwhelper");
+
+function deleteHelper() {
+  helper.style.opacity = 0;
 }

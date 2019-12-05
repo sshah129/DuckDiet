@@ -79,3 +79,21 @@ aside {
   color: #777777;
   margin-top: 5px;
 }
+
+label[for=accept] {
+  font-size: 14px;
+}
+
+/* Tablet */
+@media only screen and (max-width: 998px) {
+  #contactForm {
+    width: 50%;
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 399px) {
+  #contactForm {
+    width: 75%;
+  }
+}
