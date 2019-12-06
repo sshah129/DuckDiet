@@ -116,7 +116,7 @@
                 <div class="menu">
                   <button class="button">Midnight</button>
                   <div class="dropdown-content">
-                      <a href="#">None Colonel Johns closes at 9PM Mon-Fri and 5PM on Sat</a>
+                      <a href="#">None: Closes at 9PM Mon-Fri and 5PM on Sat</a>
                   </div>
                 </div>
               </div>
@@ -234,7 +234,17 @@
         <div class="content-container" id="menu-container">
           <div class="content-body" id="menu-body">
             <h2 class="sectionheader" id="add-item-header">Add Items</h2>
+            <h3>For instructions, head to the <a href="getstarted.html">Get Started</a> page. Enter a calorie goal before entering a meal.</h3>
             <br>
+            <div>
+              <div id="buttonDiv" class="center">
+                <fieldset>
+                  <label class="text">Enter a Calorie Goal: </label>
+                  <input type="number" placeholder="Select calories..." id="calNum" step="100" min="0" max="9999">
+                <input type = 'submit' onClick = "checkCal()">
+                </fieldset>
+              </div>
+              <div class="line"></div>
               <form id = "postForm" class="center">
                 <div class="menu-form-div">
                   <label>Meal</label><br>
@@ -295,17 +305,10 @@
                   />
                 </div>
                 <div id="submit-div">
-                  <button id="submit-day">Submit</button>
+                  <button id="submit-day">Submit Meal</button>
                 </div>
               </form>
-            <div>
-            <div id="line"></div>
-            <div id="buttonDiv" class="center"><fieldset>
-                <label class="text">Enter a Calorie Goal: </label>
-                <input type="number" placeholder="Select calories..." id="calNum" step="100" min="0" max="99999">
-              <input type = 'submit' onClick = "checkCal()">
-            </fieldset>
-            </div>
+            <div class="line" id="bottom-line"></div>
             <div class="center" id="reset">
               <button id="goal-reset" onClick = "resetCalGoal()">Reset Calorie Goal</button>
             </div>
